@@ -1,0 +1,16 @@
+services:
+  app:
+    container_name: docker_vite
+    build: 
+     context: .
+     dockerfile: Dockerfile
+    
+    restart: unless-stopped
+
+    ports:
+      - 8080:80
+
+    
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+ 
