@@ -12,5 +12,5 @@ RUN npm run build
  WORKDIR /usr/share/nginx/html
  RUN rm -rf ./*
  COPY --from=nodework /react-first-app/dist .
- EXPOSE 8084:80
+ EXPOSE 8084:8084
  ENTRYPOINT ["nginx", "-g", "daemon off;"]
